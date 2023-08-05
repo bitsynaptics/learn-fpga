@@ -16,6 +16,10 @@
 `include "CONFIGS/icebreaker_config.v"
 `endif
 
+`ifdef ICE_PIE
+`include "CONFIGS/icepie_config.v"
+`endif
+
 `ifdef ECP5_EVN
 `include "CONFIGS/ecp5evn_config.v"
 `endif
@@ -79,6 +83,10 @@
 `endif
 
 `ifdef ICE_BREAKER
+ `define ICE40
+`endif
+
+`ifdef ICE_PIE
  `define ICE40
 `endif
 

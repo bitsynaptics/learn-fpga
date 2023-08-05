@@ -49,7 +49,9 @@ module SSD1351(
     output 	      CLK, // clock
     output reg 	      CS,  // chip select (active low)
     output reg 	      DC,  // data (high) / command (low)
-    output reg 	      RST  // reset (active low)
+    output reg 	      RST,  // reset (active low)
+    output            PMODEN,
+    output            VCCEN
 );
   
    initial begin
@@ -57,6 +59,9 @@ module SSD1351(
       RST = 1'b0;
       CS  = 1'b1;
    end
+
+   assign PMODEN = 1'b1;
+   assign VCCEN  = 1'b1;
 
    /********* The clock ****************************************************/
    // Note: SSD1351 expects the raising edges of the clock in the middle of

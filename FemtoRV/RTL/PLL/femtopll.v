@@ -26,6 +26,8 @@ endmodule
   `include "pll_icestick.v"
  `elsif ICE_BREAKER 
   `include "pll_icebreaker.v" 
+ `elsif ICE_PIE
+  `include "pll_icebreaker.v" 
  `elsif ICE_FEATHER
   `include "pll_icefeather.v"
  `elsif ICE_SUGAR

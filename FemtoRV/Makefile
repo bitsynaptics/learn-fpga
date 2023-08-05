@@ -8,6 +8,7 @@ include BOARDS/icestick.mk
 include BOARDS/icestick_mecrisp_quintus.mk
 include BOARDS/icebreaker.mk
 include BOARDS/icefeather.mk
+include BOARDS/icepie.mk
 include BOARDS/icesugar.mk
 include BOARDS/icesugar_nano.mk
 include BOARDS/fomu.mk

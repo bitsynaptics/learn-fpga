@@ -50,7 +50,7 @@ module femtosoc(
  `endif
 `endif	      
 `ifdef NRV_IO_SSD1351_1331	      
-   output oled_DIN, oled_CLK, oled_CS, oled_DC, oled_RST,
+   output oled_DIN, oled_CLK, oled_CS, oled_DC, oled_RST, oled_PMODEN, oled_VCCEN,
 `endif
 `ifdef NRV_IO_UART
    input  RXD,
@@ -71,6 +71,8 @@ module femtosoc(
 `ifdef NRV_IO_BUTTONS
    `ifdef ICE_FEATHER
       input [3:0] buttons, 
+   `elsif ICE_PIE
+      input [3:0] buttons,
    `else
       input [5:0] buttons,
    `endif		
@@ -401,7 +403,9 @@ HardwareConfig hwconfig(
       .CLK(oled_CLK),
       .CS(oled_CS),
       .DC(oled_DC),
-      .RST(oled_RST)
+      .RST(oled_RST),
+      .PMODEN(oled_PMODEN),
+      .VCCEN(oled_VCCEN)
    );
 `endif   
 

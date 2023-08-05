@@ -1,0 +1,45 @@
+set_io pclk 35
+
+set_io D1 11 # Blue
+set_io D2 37 # Amber
+set_io D3 40 # Red
+set_io D4 41 # Green
+set_io D5 39 # Blue
+
+set_io TXD 9 # UART TX
+set_io RXD 6 # UART RX 
+
+set_io RESET 10 # BTN1
+
+set_io buttons[0] 34 # BTN2
+set_io buttons[1] 43 # ENC_SW
+set_io buttons[2] 26 # ENC_CHA
+set_io buttons[3] 27 # ENC_CHB
+
+# MAX7219 Led Matrix wired to PMOD 2
+set_io ledmtx_DIN 28
+set_io ledmtx_CS  32 
+set_io ledmtx_CLK 36  
+
+# PmodOLEDrgb wired to PMOD 3
+set_io oled_RST    48  # 4A - 48
+set_io oled_DC     3   # 9B - 3
+set_io oled_CS     2   # 6A - 2  
+set_io oled_DIN    4   # 8A - 4
+set_io oled_CLK    45  # 5B - 45
+set_io oled_NC     47  # 2A - 47
+set_io oled_VCCEN  44  # 3B - 44
+set_io oled_PMODEN 46  # 0A - 46
+
+# SPI Flash
+set_io spi_cs_n 16
+set_io spi_miso 17
+set_io spi_mosi 14
+set_io spi_clk  15
+
+# SD card - Shared with PMOD 1
+set_io sd_mosi 19   # 2_4
+set_io sd_miso 21   # 2_3
+set_io sd_clk  18   # 2_10
+set_io sd_cs_n 20   # 2_9
+
